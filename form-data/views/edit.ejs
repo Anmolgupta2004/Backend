@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+<body>
+    <div class="w-full h-full  bg-zinc-900 p-10 text-white">
+
+        <div>
+            <a class="text-blue-300" href="/read">Read All Users</a>
+        </div>
+
+
+        <h1 class="text-3xl tracking-tigher mt-7 ">Update User</h1>
+        <div class=" flex flex-wrap px-5 py-2 mt-2">
+        <form action="/update/<%=user._id%>" method="post" >
+            <input class="px-5 py-2 my-2 border-2 border-zinc-800 rounded-lg outline-none bg-transparent" value="<%=user.name%>" name="name" type="text" placeholder="Name">
+            <input class="px-5 py-2 my-2 border-2 border-zinc-800 rounded-lg outline-none bg-transparent" value="<%=user.email%>" name="email" type="text" placeholder="Email">
+            <input class="px-5 py-2 my-2 border-2 border-zinc-800 rounded-lg outline-none bg-transparent" value="<%=user.image%>" name="image" type="text" placeholder="Image-URL">
+            <input class="px-5 py-2 my-2 border-2 border-zinc-800 rounded-lg outline-none bg-transparent" value="<%=user.description%>" name="description" type="text" placeholder="Description">
+         
+            <input class="px-5 py-2 my-2 bg-yellow-500 rounded-lg text-black text-center cursor-pointer" type="submit" value="Update User">
+        </form>
+    </div>
+    </div>
+</body>
+</html>
